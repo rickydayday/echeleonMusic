@@ -1,0 +1,45 @@
+
+
+:root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+  }
+  
+  ion-content{
+      --ion-background-color:#000 !important;
+      font-family: 'Poppins' !important;
+      font-weight: bold;
+
+  }
+  .fa{
+
+      font-size: 60px;
+      margin-top: 2rem;
+
+  }
+  .tile_one {
+  background-image: linear-gradient(to right, red , white);
+  border-radius: 5px;
+ }
+
+ .tile_two{
+  background-image: linear-gradient(to right, blue , white);
+  border-radius: 5px;
+ }
+
+ .tile_three{
+  background-image: linear-gradient(to right, green , white);
+  border-radius: 5px;
+ }
+ .tile_four{
+  background-image: linear-gradient(to right, purple , white);
+  border-radius: 5px;
+ }
+ ion-icon{
+
+  color: #fff;
+
+ }
+ ion-label{
+  color:#fff !important;
+ }

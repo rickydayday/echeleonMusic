@@ -6,6 +6,18 @@
        Erick Oyugi
     </author>
     <content src="login.html" />
+   
+<!-- A wildcard can be used to whitelist the entire network,
+     over HTTP and HTTPS.
+     *NOT RECOMMENDED* -->
+<allow-navigation href="*" />
+
+<!-- The above is equivalent to these three declarations -->
+<allow-navigation href="http://*/*" />
+<allow-navigation href="https://*/*" />
+<allow-navigation href="data:*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+
+<allow-navigation href="data:*" />
 </widget>

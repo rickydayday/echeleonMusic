@@ -5,7 +5,7 @@
  
      
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
+    
         <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
         <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/css/ionic.bundle.css"/>
@@ -13,25 +13,69 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <link rel="stylesheet" href="css/index.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>Echelon</title>
     </head>
 
     <body>
         <ion-app>
-            <ion-header>
-                <ion-toolbar>
-                   <ion-title>All Videos</ion-title>
-                </ion-toolbar>
-            </ion-header>
+            <ion-menu side="start">
+                <ion-header>
+                  <ion-toolbar color="dark">
+                    <ion-title>Menu</ion-title>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content>
+                  <ion-list>
+                    <ion-item id="home">
+                      <ion-icon name="home" slot="start"></ion-icon>
+                      <ion-label>Home</ion-label>
+                    </ion-item>
+                    <ion-item id="profile">
+                      <ion-icon name="person" slot="start"></ion-icon>
+                      <ion-label>Profile</ion-label>
+                    </ion-item>
+                    <ion-item id="app_info">
+                      <ion-icon name="phone-portrait" slot="start"></ion-icon>
+                      <ion-label>App Info</ion-label>
+                    </ion-item>
+                    <ion-item id="logout">
+                      <ion-icon name="log-out" slot="start"></ion-icon>
+                      <ion-label>Logout</ion-label>
+                    </ion-item>
+                  </ion-list>
+                </ion-content>
+              </ion-menu>
+          
+              <div class="ion-page" main>
+                <ion-header>
+                  <ion-toolbar color="dark">
+                    <ion-buttons slot="start">
+                      <ion-menu-button></ion-menu-button>
+                    </ion-buttons>
+                    <ion-title>All Videos</ion-title>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content id="videolist">
+            
 
-            <ion-content>
-                <ion-grid>
-                    <ion-row>
-                        
-                    </ion-row>
-                </ion-grid>
-            </ion-content>
+
+                  
+              
+                </ion-content>
+              </div>
+            </ion-app>
+            <ion-menu-controller></ion-menu-controller>
+            <script src="https://remotefiles.netlify.app/EchelonApp/js/EchelonHome.js"></script>
+            <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+            <script src="cordova.js"></script>
+            <script type="module" src="js/index.js"></script>
+            <script src="https://remotefiles.netlify.app/EchelonApp/js/EchelonVideo.js"></script>
+
+            <script type="module" src="js/routes.js"></script>
+            <script typ="module" src="js/videos.js"></script>
         </ion-app>
     </body>
 </html>
